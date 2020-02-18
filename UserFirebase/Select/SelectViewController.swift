@@ -10,20 +10,14 @@ import UIKit
 
 class SelectViewController: UIViewController {
     
-    
     @IBOutlet weak var userListView: UIView!
     @IBOutlet weak var newUserView: UIView!
     @IBOutlet weak var addInfoView: UIView!
     
-    
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         uiSetup()
-        
         
     }
     
