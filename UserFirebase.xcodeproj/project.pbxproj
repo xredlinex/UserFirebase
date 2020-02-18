@@ -10,7 +10,6 @@
 		009758BFC8317D761AA243F1 /* Pods_UserFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0317390F4A17E599D03E64DE /* Pods_UserFirebase.framework */; };
 		9730E71223FBD57200B8340C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730E71123FBD57200B8340C /* AppDelegate.swift */; };
 		9730E71423FBD57200B8340C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730E71323FBD57200B8340C /* SceneDelegate.swift */; };
-		9730E71623FBD57200B8340C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730E71523FBD57200B8340C /* ViewController.swift */; };
 		9730E71923FBD57200B8340C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9730E71723FBD57200B8340C /* Main.storyboard */; };
 		9730E71B23FBD57300B8340C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9730E71A23FBD57300B8340C /* Assets.xcassets */; };
 		9730E71E23FBD57300B8340C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9730E71C23FBD57300B8340C /* LaunchScreen.storyboard */; };
@@ -36,6 +35,9 @@
 		9730E75523FBDC5400B8340C /* ChooseUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730E75323FBDC5400B8340C /* ChooseUserTableViewCell.swift */; };
 		9730E75623FBDC5400B8340C /* ChooseUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9730E75423FBDC5400B8340C /* ChooseUserTableViewCell.xib */; };
 		9730E75923FBDC6E00B8340C /* ChooseUserViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730E75823FBDC6E00B8340C /* ChooseUserViewController+TableView.swift */; };
+		9730E75B23FBE77500B8340C /* Class+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730E75A23FBE77500B8340C /* Class+Extension.swift */; };
+		977406E423FC569F0029453E /* PictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977406E223FC569F0029453E /* PictureTableViewCell.swift */; };
+		977406E523FC569F0029453E /* PictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977406E323FC569F0029453E /* PictureTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +46,6 @@
 		9730E70E23FBD57200B8340C /* UserFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9730E71123FBD57200B8340C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9730E71323FBD57200B8340C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9730E71523FBD57200B8340C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9730E71823FBD57200B8340C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9730E71A23FBD57300B8340C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9730E71D23FBD57300B8340C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +72,9 @@
 		9730E75323FBDC5400B8340C /* ChooseUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseUserTableViewCell.swift; sourceTree = "<group>"; };
 		9730E75423FBDC5400B8340C /* ChooseUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseUserTableViewCell.xib; sourceTree = "<group>"; };
 		9730E75823FBDC6E00B8340C /* ChooseUserViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChooseUserViewController+TableView.swift"; sourceTree = "<group>"; };
+		9730E75A23FBE77500B8340C /* Class+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+Extension.swift"; sourceTree = "<group>"; };
+		977406E223FC569F0029453E /* PictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTableViewCell.swift; sourceTree = "<group>"; };
+		977406E323FC569F0029453E /* PictureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureTableViewCell.xib; sourceTree = "<group>"; };
 		B1C3788EA23D6F27949DB16F /* Pods-UserFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserFirebase.debug.xcconfig"; path = "Target Support Files/Pods-UserFirebase/Pods-UserFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,8 +120,8 @@
 				9730E74323FBDB7800B8340C /* ChooseUser */,
 				9730E74823FBDBB800B8340C /* AddInfo */,
 				9730E71323FBD57200B8340C /* SceneDelegate.swift */,
-				9730E71523FBD57200B8340C /* ViewController.swift */,
-				9730E71723FBD57200B8340C /* Main.storyboard */,
+				97DB022E23FBEC24005171E9 /* Storyboard */,
+				9730E75C23FBE77A00B8340C /* UIExtension */,
 				9730E71A23FBD57300B8340C /* Assets.xcassets */,
 				9730E71C23FBD57300B8340C /* LaunchScreen.storyboard */,
 				9730E71F23FBD57300B8340C /* Info.plist */,
@@ -143,6 +147,7 @@
 				9730E73023FBDA4A00B8340C /* ProfileViewController+TableView.swift */,
 				9730E73223FBDA5300B8340C /* ProfileViewController+Extension.swift */,
 				9730E75223FBDC2700B8340C /* ProfileCell */,
+				977406E623FC56A30029453E /* PictureCell */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -210,6 +215,31 @@
 				9730E75423FBDC5400B8340C /* ChooseUserTableViewCell.xib */,
 			);
 			path = ChooseCell;
+			sourceTree = "<group>";
+		};
+		9730E75C23FBE77A00B8340C /* UIExtension */ = {
+			isa = PBXGroup;
+			children = (
+				9730E75A23FBE77500B8340C /* Class+Extension.swift */,
+			);
+			path = UIExtension;
+			sourceTree = "<group>";
+		};
+		977406E623FC56A30029453E /* PictureCell */ = {
+			isa = PBXGroup;
+			children = (
+				977406E223FC569F0029453E /* PictureTableViewCell.swift */,
+				977406E323FC569F0029453E /* PictureTableViewCell.xib */,
+			);
+			path = PictureCell;
+			sourceTree = "<group>";
+		};
+		97DB022E23FBEC24005171E9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9730E71723FBD57200B8340C /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		AEB0CF6FD7CDA3BCF6FD817A /* Pods */ = {
@@ -289,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977406E523FC569F0029453E /* PictureTableViewCell.xib in Resources */,
 				9730E71E23FBD57300B8340C /* LaunchScreen.storyboard in Resources */,
 				9730E72623FBD80D00B8340C /* GoogleService-Info.plist in Resources */,
 				9730E71B23FBD57300B8340C /* Assets.xcassets in Resources */,
@@ -349,7 +380,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9730E73623FBDA9300B8340C /* SelectViewController.swift in Sources */,
-				9730E71623FBD57200B8340C /* ViewController.swift in Sources */,
 				9730E72A23FBDA0A00B8340C /* UserListViewController+TableView.swift in Sources */,
 				9730E73D23FBDB1600B8340C /* NewUserViewController+Extension.swift in Sources */,
 				9730E72823FBD9F800B8340C /* UserListViewController.swift in Sources */,
@@ -367,7 +397,9 @@
 				9730E74223FBDB7500B8340C /* ChooseUserViewController+Extension.swift in Sources */,
 				9730E74723FBDBB400B8340C /* AddInfoViewController+Extension.swift in Sources */,
 				9730E74B23FBDC0C00B8340C /* UsersTableViewCell.swift in Sources */,
+				9730E75B23FBE77500B8340C /* Class+Extension.swift in Sources */,
 				9730E71423FBD57200B8340C /* SceneDelegate.swift in Sources */,
+				977406E423FC569F0029453E /* PictureTableViewCell.swift in Sources */,
 				9730E75523FBDC5400B8340C /* ChooseUserTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
