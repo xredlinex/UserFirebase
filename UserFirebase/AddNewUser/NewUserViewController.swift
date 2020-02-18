@@ -11,14 +11,11 @@ import UIKit
 class NewUserViewController: UIViewController {
     
     @IBOutlet weak var addNewUserButtonView: UIView!
-    
     @IBOutlet weak var userNameTextField: UITextField!
-    
     @IBOutlet weak var userSurnameTextField: UITextField!
-    
     @IBOutlet weak var userAgeTextField: UITextField!
-    
     @IBOutlet weak var userCityTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

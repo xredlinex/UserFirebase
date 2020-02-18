@@ -73,13 +73,32 @@ extension UIView {
         
     }
     
-    
-    
-    
+    func addCellSetUp() {
+          
+          let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
+          let blurView = UIVisualEffectView(effect: blurEffect)
+          blurView.translatesAutoresizingMaskIntoConstraints = false
+          self.insertSubview(blurView, at: 0)
+          blurView.clipsToBounds = true
+          blurView.layer.cornerRadius = 12.0
+          blurView.alpha = 0.8
+          NSLayoutConstraint.activate([blurView.heightAnchor.constraint(equalTo: self.heightAnchor),
+                                      blurView.widthAnchor.constraint(equalTo: self.widthAnchor)])
+          
+      }
     
 }
 
-extension UIViewController {
+extension UIView {
     
- 
+    func gradientRoundCellPic(_ roundview: UIView) {
+        
+        
+        
+        
+        
+        
+    }
+    
 }
+
