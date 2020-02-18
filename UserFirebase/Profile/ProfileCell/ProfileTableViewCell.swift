@@ -10,15 +10,22 @@ import UIKit
 
 class ProfileTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var userKeyRowView: UIView!
+    @IBOutlet weak var keyTextLabel: UILabel!
+    @IBOutlet weak var valueTextLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        userKeyRowView.addCellSetUp()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func updateProfileCell() {
+        
+        
+        
     }
     
 }
+
+

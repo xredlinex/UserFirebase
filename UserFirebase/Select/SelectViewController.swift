@@ -39,7 +39,7 @@ class SelectViewController: UIViewController {
     }
     
     @IBAction func didTapAddNewInfoActionButton(_ sender: Any) {
-        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddInfoViewController") as! AddInfoViewController
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChooseUserViewController") as! ChooseUserViewController
         navigationController?.pushViewController(viewController, animated: false)
     }
 }

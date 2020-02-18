@@ -36,6 +36,8 @@
 		9730E75623FBDC5400B8340C /* ChooseUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9730E75423FBDC5400B8340C /* ChooseUserTableViewCell.xib */; };
 		9730E75923FBDC6E00B8340C /* ChooseUserViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730E75823FBDC6E00B8340C /* ChooseUserViewController+TableView.swift */; };
 		9730E75B23FBE77500B8340C /* Class+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730E75A23FBE77500B8340C /* Class+Extension.swift */; };
+		977406E423FC569F0029453E /* PictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977406E223FC569F0029453E /* PictureTableViewCell.swift */; };
+		977406E523FC569F0029453E /* PictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977406E323FC569F0029453E /* PictureTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		9730E75423FBDC5400B8340C /* ChooseUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseUserTableViewCell.xib; sourceTree = "<group>"; };
 		9730E75823FBDC6E00B8340C /* ChooseUserViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChooseUserViewController+TableView.swift"; sourceTree = "<group>"; };
 		9730E75A23FBE77500B8340C /* Class+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+Extension.swift"; sourceTree = "<group>"; };
+		977406E223FC569F0029453E /* PictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTableViewCell.swift; sourceTree = "<group>"; };
+		977406E323FC569F0029453E /* PictureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureTableViewCell.xib; sourceTree = "<group>"; };
 		B1C3788EA23D6F27949DB16F /* Pods-UserFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserFirebase.debug.xcconfig"; path = "Target Support Files/Pods-UserFirebase/Pods-UserFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +147,7 @@
 				9730E73023FBDA4A00B8340C /* ProfileViewController+TableView.swift */,
 				9730E73223FBDA5300B8340C /* ProfileViewController+Extension.swift */,
 				9730E75223FBDC2700B8340C /* ProfileCell */,
+				977406E623FC56A30029453E /* PictureCell */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -218,6 +223,15 @@
 				9730E75A23FBE77500B8340C /* Class+Extension.swift */,
 			);
 			path = UIExtension;
+			sourceTree = "<group>";
+		};
+		977406E623FC56A30029453E /* PictureCell */ = {
+			isa = PBXGroup;
+			children = (
+				977406E223FC569F0029453E /* PictureTableViewCell.swift */,
+				977406E323FC569F0029453E /* PictureTableViewCell.xib */,
+			);
+			path = PictureCell;
 			sourceTree = "<group>";
 		};
 		97DB022E23FBEC24005171E9 /* Storyboard */ = {
@@ -305,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977406E523FC569F0029453E /* PictureTableViewCell.xib in Resources */,
 				9730E71E23FBD57300B8340C /* LaunchScreen.storyboard in Resources */,
 				9730E72623FBD80D00B8340C /* GoogleService-Info.plist in Resources */,
 				9730E71B23FBD57300B8340C /* Assets.xcassets in Resources */,
@@ -384,6 +399,7 @@
 				9730E74B23FBDC0C00B8340C /* UsersTableViewCell.swift in Sources */,
 				9730E75B23FBE77500B8340C /* Class+Extension.swift in Sources */,
 				9730E71423FBD57200B8340C /* SceneDelegate.swift in Sources */,
+				977406E423FC569F0029453E /* PictureTableViewCell.swift in Sources */,
 				9730E75523FBDC5400B8340C /* ChooseUserTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

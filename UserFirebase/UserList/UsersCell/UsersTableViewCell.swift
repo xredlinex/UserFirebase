@@ -34,20 +34,16 @@ extension UsersTableViewCell {
     func setupUiForCell() {
         
         userContentView.addCellSetUp()
+        userImageView.image = UIImage(named: "blank")
         containerImageView.clipsToBounds = true
         containerImageView.layer.cornerRadius = containerImageView.frame.width / 2
-        containerImageView.layer.borderColor = UIColor.white.cgColor
-        containerImageView.layer.borderWidth = 1
-        
-        
-    
-       
-      
-
-
+        containerImageView.layer.borderColor = UIColor(red: 118/255, green: 59/255, blue: 90/255, alpha: 1).cgColor
+        containerImageView.layer.borderWidth = 3
     }
     
     func updateUserData() {
+        
+        
         
         
         

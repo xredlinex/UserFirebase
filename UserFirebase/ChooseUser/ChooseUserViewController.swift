@@ -9,14 +9,25 @@
 import UIKit
 
 class ChooseUserViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        screenSetupBackground()
+        
+        tableView.register(UINib(nibName: "ChooseUserTableViewCell", bundle: nil), forCellReuseIdentifier: "ChooseUserTableViewCell")
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.reloadData()
     }
     
-
+    @IBAction func didTapGoBackActionButton(_ sender: Any) {
+        navigationController?.popViewController(animated: false)
+    }
+    
     /*
     // MARK: - Navigation
 

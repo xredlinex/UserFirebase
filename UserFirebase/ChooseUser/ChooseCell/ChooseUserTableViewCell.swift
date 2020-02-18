@@ -9,10 +9,13 @@
 import UIKit
 
 class ChooseUserTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var userInfoView: UIView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        userInfoView.addCellSetUp()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
