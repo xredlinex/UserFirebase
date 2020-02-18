@@ -7,5 +7,6 @@ target 'UserFirebase' do
 
   pod 'Firebase/Analytics'
   pod 'FirebaseDatabase'
+  pod 'Kingfisher'
 
 end
