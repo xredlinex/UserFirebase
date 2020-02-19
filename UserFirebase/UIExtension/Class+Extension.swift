@@ -55,7 +55,7 @@ extension UIView {
         blurView.layer.cornerRadius = 12.0
         blurView.alpha = 0.8
         NSLayoutConstraint.activate([blurView.heightAnchor.constraint(equalTo: self.heightAnchor),
-                                    blurView.widthAnchor.constraint(equalTo: self.widthAnchor)])
+                                     blurView.widthAnchor.constraint(equalTo: self.widthAnchor)])
         
     }
     
@@ -69,62 +69,21 @@ extension UIView {
         blurView.layer.cornerRadius = 12.0
         blurView.alpha = 0.8
         NSLayoutConstraint.activate([blurView.heightAnchor.constraint(equalTo: self.heightAnchor),
-                                    blurView.widthAnchor.constraint(equalTo: self.widthAnchor)])
-        
+                                     blurView.widthAnchor.constraint(equalTo: self.widthAnchor)])
     }
     
     func addCellSetUp() {
-          
-          let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
-          let blurView = UIVisualEffectView(effect: blurEffect)
-          blurView.translatesAutoresizingMaskIntoConstraints = false
-          self.insertSubview(blurView, at: 0)
-          blurView.clipsToBounds = true
-          blurView.layer.cornerRadius = 12.0
-          blurView.alpha = 0.8
-          NSLayoutConstraint.activate([blurView.heightAnchor.constraint(equalTo: self.heightAnchor),
-                                      blurView.widthAnchor.constraint(equalTo: self.widthAnchor)])
-          
-      }
-    
-}
-
-extension UIView {
-    
-    func gradientRoundCellPic(_ roundview: UIView) {
         
-        
-        
-        
-        
-        
+        let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        self.insertSubview(blurView, at: 0)
+        blurView.clipsToBounds = true
+        blurView.layer.cornerRadius = 12.0
+        blurView.alpha = 0.8
+        NSLayoutConstraint.activate([blurView.heightAnchor.constraint(equalTo: self.heightAnchor),
+                                     blurView.widthAnchor.constraint(equalTo: self.widthAnchor)])
     }
-    
 }
-
-//extension CALayer {
-//    
-//    func roundLayer(_ view: UIView) {
-//        
-//        let firstColor = UIColor(red: 118/255, green: 59/255, blue: 90/255, alpha: 1).cgColor
-//           let secondColor = UIColor(red: 75/255, green: 102/255, blue: 124/255, alpha: 1).cgColor
-//           let lineWidth: CGFloat = 2
-//           let rect = view.bounds.insetBy(dx: lineWidth / 2, dy: lineWidth / 2)
-//           let path = UIBezierPath(roundedRect: rect, cornerRadius: view.frame.size.height / 2)
-//           let gradient = CAGradientLayer()
-//           gradient.frame =  CGRect(origin: CGPoint.zero, size: view.frame.size)
-//           gradient.colors = [firstColor, secondColor]
-//           gradient.startPoint = CGPoint(x: 0, y: 0.5)
-//           gradient.endPoint = CGPoint(x: 1, y: 0.5)
-//           let shape = CAShapeLayer()
-//           shape.lineWidth = lineWidth
-//           shape.path = path.cgPath
-//           shape.strokeColor = UIColor.black.cgColor
-//           shape.fillColor = UIColor.clear.cgColor
-//           gradient.mask = shape
-//        
-//    }
-//    
-//}
 
 

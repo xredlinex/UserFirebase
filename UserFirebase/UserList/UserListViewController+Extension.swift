@@ -9,34 +9,35 @@
 import Foundation
 import UIKit
 import FirebaseDatabase
+import Toast_Swift
 
 extension UserListViewController {
     
     func getUsers() {
-
+        
+        self.view.makeToastActivity(ToastPosition.center)
+        
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            if let value = snapshot.value as? [String : AnyObject] {
+            if let value = snapshot.value as? [String : Any] {
                 debugPrint(value)
-                if let users = value["users"] as? [String: AnyObject] {
+                if let users = value["users"] as? [String: Any] {
                     self.usersDateBase = users
-                    
-                 
- 
                     DispatchQueue.main.async {
-                        for (user, item) in self.usersDateBase ?? [:] {
-                                             let userBase = User(fromDict: item as! [String : AnyObject])
-                                             self.users.append(userBase)
-                                         }
+                        for (_ , item) in self.usersDateBase {
+                            let userBase = User(fromDict: item as! [String : AnyObject])
+                            self.users.append(userBase)
+                        }
                         self.tableView.reloadData()
+                        self.view.hideToastActivity()
                     }
-                    
                 } else {
-                    debugPrint("error one no users")
+                    self.view.hideToastActivity()
+                    self.presentErrorAlert("Sorry No Üsers Found:(")
                 }
             } else {
-                debugPrint("no value")
+                self.view.hideToastActivity()
+                self.presentErrorAlert("Sorry No Data :(")
             }
-            
         }) { (error) in
             print(error.localizedDescription)
         }
@@ -47,8 +48,8 @@ extension UserListViewController {
     
     func prepareUserBase() {
         
-       
-
+        
+        
         
     }
     

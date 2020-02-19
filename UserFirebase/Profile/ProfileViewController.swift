@@ -12,6 +12,7 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +29,6 @@ class ProfileViewController: UIViewController {
     @IBAction func didTapGoBackActionButon(_ sender: Any) {
         navigationController?.popViewController(animated: false)
     }
-    
-
-
 }
 
 

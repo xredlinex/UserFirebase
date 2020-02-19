@@ -8,5 +8,6 @@ target 'UserFirebase' do
   pod 'Firebase/Analytics'
   pod 'FirebaseDatabase'
   pod 'Kingfisher'
+  pod 'Toast-Swift', '~> 5.0.1'
 
 end

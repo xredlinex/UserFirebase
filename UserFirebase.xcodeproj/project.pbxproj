@@ -37,6 +37,9 @@
 		9730E75923FBDC6E00B8340C /* ChooseUserViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730E75823FBDC6E00B8340C /* ChooseUserViewController+TableView.swift */; };
 		9730E75B23FBE77500B8340C /* Class+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730E75A23FBE77500B8340C /* Class+Extension.swift */; };
 		9746AC6423FC9A81009E6EDB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746AC6323FC9A81009E6EDB /* UserModel.swift */; };
+		9765D2FA23FDA2DA00225D9E /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765D2F923FDA2DA00225D9E /* Alert+Extension.swift */; };
+		9765D2FC23FDABF300225D9E /* UserValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765D2FB23FDABF300225D9E /* UserValidation.swift */; };
+		9765D2FF23FDACCA00225D9E /* NewUserViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765D2FE23FDACCA00225D9E /* NewUserViewController+TextField.swift */; };
 		977406E423FC569F0029453E /* PictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977406E223FC569F0029453E /* PictureTableViewCell.swift */; };
 		977406E523FC569F0029453E /* PictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977406E323FC569F0029453E /* PictureTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -75,6 +78,9 @@
 		9730E75823FBDC6E00B8340C /* ChooseUserViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChooseUserViewController+TableView.swift"; sourceTree = "<group>"; };
 		9730E75A23FBE77500B8340C /* Class+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+Extension.swift"; sourceTree = "<group>"; };
 		9746AC6323FC9A81009E6EDB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9765D2F923FDA2DA00225D9E /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
+		9765D2FB23FDABF300225D9E /* UserValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidation.swift; sourceTree = "<group>"; };
+		9765D2FE23FDACCA00225D9E /* NewUserViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewUserViewController+TextField.swift"; sourceTree = "<group>"; };
 		977406E223FC569F0029453E /* PictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTableViewCell.swift; sourceTree = "<group>"; };
 		977406E323FC569F0029453E /* PictureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureTableViewCell.xib; sourceTree = "<group>"; };
 		B1C3788EA23D6F27949DB16F /* Pods-UserFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserFirebase.debug.xcconfig"; path = "Target Support Files/Pods-UserFirebase/Pods-UserFirebase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 				9730E74823FBDBB800B8340C /* AddInfo */,
 				97DB022E23FBEC24005171E9 /* Storyboard */,
 				9730E75C23FBE77A00B8340C /* UIExtension */,
+				9765D2FD23FDABFC00225D9E /* Validation */,
 				9730E71A23FBD57300B8340C /* Assets.xcassets */,
 				9730E71C23FBD57300B8340C /* LaunchScreen.storyboard */,
 				9730E71F23FBD57300B8340C /* Info.plist */,
@@ -169,6 +176,7 @@
 			children = (
 				9730E73A23FBDB0A00B8340C /* NewUserViewController.swift */,
 				9730E73C23FBDB1600B8340C /* NewUserViewController+Extension.swift */,
+				9765D2FE23FDACCA00225D9E /* NewUserViewController+TextField.swift */,
 			);
 			path = AddNewUser;
 			sourceTree = "<group>";
@@ -224,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				9730E75A23FBE77500B8340C /* Class+Extension.swift */,
+				9765D2F923FDA2DA00225D9E /* Alert+Extension.swift */,
 			);
 			path = UIExtension;
 			sourceTree = "<group>";
@@ -234,6 +243,14 @@
 				9746AC6323FC9A81009E6EDB /* UserModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9765D2FD23FDABFC00225D9E /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				9765D2FB23FDABF300225D9E /* UserValidation.swift */,
+			);
+			path = Validation;
 			sourceTree = "<group>";
 		};
 		977406E623FC56A30029453E /* PictureCell */ = {
@@ -392,6 +409,7 @@
 			files = (
 				9730E73623FBDA9300B8340C /* SelectViewController.swift in Sources */,
 				9730E72A23FBDA0A00B8340C /* UserListViewController+TableView.swift in Sources */,
+				9765D2FC23FDABF300225D9E /* UserValidation.swift in Sources */,
 				9730E73D23FBDB1600B8340C /* NewUserViewController+Extension.swift in Sources */,
 				9730E72823FBD9F800B8340C /* UserListViewController.swift in Sources */,
 				9730E75923FBDC6E00B8340C /* ChooseUserViewController+TableView.swift in Sources */,
@@ -399,6 +417,7 @@
 				9730E72C23FBDA1800B8340C /* UserListViewController+Extension.swift in Sources */,
 				9730E75023FBDC2400B8340C /* ProfileTableViewCell.swift in Sources */,
 				9746AC6423FC9A81009E6EDB /* UserModel.swift in Sources */,
+				9765D2FA23FDA2DA00225D9E /* Alert+Extension.swift in Sources */,
 				9730E72F23FBDA3E00B8340C /* ProfileViewController.swift in Sources */,
 				9730E71223FBD57200B8340C /* AppDelegate.swift in Sources */,
 				9730E73823FBDAA200B8340C /* SelectViewController+Extension.swift in Sources */,
@@ -406,6 +425,7 @@
 				9730E74023FBDB6800B8340C /* ChooseUserViewController.swift in Sources */,
 				9730E73123FBDA4A00B8340C /* ProfileViewController+TableView.swift in Sources */,
 				9730E73B23FBDB0A00B8340C /* NewUserViewController.swift in Sources */,
+				9765D2FF23FDACCA00225D9E /* NewUserViewController+TextField.swift in Sources */,
 				9730E74223FBDB7500B8340C /* ChooseUserViewController+Extension.swift in Sources */,
 				9730E74723FBDBB400B8340C /* AddInfoViewController+Extension.swift in Sources */,
 				9730E74B23FBDC0C00B8340C /* UsersTableViewCell.swift in Sources */,
