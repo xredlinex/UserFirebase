@@ -18,13 +18,11 @@ class SelectViewController: UIViewController {
         super.viewDidLoad()
         
         uiSetup()
-        
     }
     
     @IBAction func didTapShowUserListActionButtom(_ sender: Any) {
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
         navigationController?.pushViewController(viewController, animated: false)
-        
     }
     
     @IBAction func didTapAddNewUserActionButtom(_ sender: Any) {
@@ -38,15 +36,3 @@ class SelectViewController: UIViewController {
     }
 }
 
-
-extension SelectViewController {
-    
-    func uiSetup() {
-        
-        mainScreenSetupBackground("https://media.giphy.com/media/SpoZWVAYlMCMGcLfqU/giphy.gif")
-        userListView.mainSreenSetupButtons()
-        newUserView.mainSreenSetupButtons()
-        addInfoView.mainSreenSetupButtons()
-        
-    }
-}

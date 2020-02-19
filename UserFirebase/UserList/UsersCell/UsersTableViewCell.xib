@@ -85,6 +85,8 @@
                 <outlet property="containerImageView" destination="BZm-lf-iQP" id="wM9-ff-Nki"/>
                 <outlet property="userContentView" destination="Sph-4L-dXP" id="TE3-po-u3k"/>
                 <outlet property="userImageView" destination="vgF-v8-Jhg" id="Gzh-59-vLX"/>
+                <outlet property="userNameTextLabel" destination="wgZ-fF-NXa" id="Hzj-BO-oHe"/>
+                <outlet property="userSurnameTextLabel" destination="SCT-cu-0Pc" id="xGp-eS-duj"/>
             </connections>
             <point key="canvasLocation" x="-101" y="-4"/>
         </tableViewCell>

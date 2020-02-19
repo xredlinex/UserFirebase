@@ -6,4 +6,15 @@
 //  Copyright © 2020 alexey sorochan. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension SelectViewController {
+    
+    func uiSetup() {
+        
+        mainScreenSetupBackground("https://media.giphy.com/media/SpoZWVAYlMCMGcLfqU/giphy.gif")
+        userListView.mainSreenSetupButtons()
+        newUserView.mainSreenSetupButtons()
+        addInfoView.mainSreenSetupButtons()
+    }
+}
