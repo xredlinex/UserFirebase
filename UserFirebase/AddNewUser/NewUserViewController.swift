@@ -35,7 +35,7 @@ class NewUserViewController: UIViewController {
         
         let keyboardWiilHide = UITapGestureRecognizer(target: self, action: #selector(keyboardHide))
         view.addGestureRecognizer(keyboardWiilHide)
-        addNextButtonAgeField()
+        addNextButtonNumberPad()
     }
     
     @IBAction func didTapGoBackActionButton(_ sender: Any) {

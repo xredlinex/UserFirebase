@@ -20,7 +20,7 @@ extension NewUserViewController {
 extension NewUserViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        bottomHeightConstraint.constant = 280
+        bottomHeightConstraint.constant = 310
         return true
     }
     
@@ -44,20 +44,23 @@ extension NewUserViewController: UITextFieldDelegate {
 
 extension NewUserViewController {
     
-    @objc func addNextButtonAgeField() {
-        userCityTextField.becomeFirstResponder()
-    }
-    
     func addNextButtonNumberPad() {
         let nextToolBar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 40))
+        nextToolBar.barStyle = .default
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let next = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(addNextButtonAgeField))
-        let item = [flexSpace, next]
-        nextToolBar.barStyle = .default
+        let item = [flexSpace, next, flexSpace]
         nextToolBar.backgroundColor = .red
         next.tintColor = .white
         nextToolBar.items = item
         nextToolBar.sizeToFit()
         userAgeTextField.inputAccessoryView = nextToolBar
+    }
+}
+
+extension NewUserViewController {
+    
+    @objc func addNextButtonAgeField() {
+        userCityTextField.becomeFirstResponder()
     }
 }
