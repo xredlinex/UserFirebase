@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16085" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zGA-aU-fp7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zGA-aU-fp7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16078.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -417,6 +417,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="HgE-O5-7Ds"/>
                                                         </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next"/>
                                                     </textField>
@@ -457,6 +458,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="C9D-wJ-Fd1"/>
                                                         </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next"/>
                                                     </textField>
@@ -498,6 +500,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="Zhe-cw-vwR"/>
                                                         </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next"/>
                                                     </textField>
@@ -539,8 +542,9 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="FqY-Sq-BbE"/>
                                                         </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="done"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw7-H4-JeM">
                                                         <rect key="frame" x="20" y="8" width="134" height="16"/>
@@ -642,6 +646,7 @@
                     </view>
                     <connections>
                         <outlet property="addNewUserButtonView" destination="DfE-gB-tCO" id="3kG-5z-4x9"/>
+                        <outlet property="bottomHeightConstraint" destination="ka2-TE-qAd" id="z1n-oz-0de"/>
                         <outlet property="userAgeTextField" destination="GHt-z5-48z" id="nsS-4q-EEZ"/>
                         <outlet property="userCityTextField" destination="N4n-4Q-jEf" id="8Mi-xD-up7"/>
                         <outlet property="userNameTextField" destination="Hba-ih-DPf" id="HNz-Hh-wMk"/>
@@ -891,9 +896,6 @@
                                                         <state key="normal" title="add new field">
                                                             <color key="titleColor" red="0.50588235290000005" green="0.2666666667" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
-                                                        <connections>
-                                                            <action selector="didTapAddNewUserActionButton:" destination="pZF-rs-anP" eventType="touchUpInside" id="nQe-ev-F4F"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -973,9 +975,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
-        <image name="person.3.fill" catalog="system" width="128" height="61"/>
-        <image name="person.badge.plus.fill" catalog="system" width="128" height="116"/>
-        <image name="plus.bubble.fill" catalog="system" width="128" height="110"/>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="person.3.fill" catalog="system" width="71" height="34"/>
+        <image name="person.badge.plus.fill" catalog="system" width="64" height="58"/>
+        <image name="plus.bubble.fill" catalog="system" width="64" height="54"/>
     </resources>
 </document>

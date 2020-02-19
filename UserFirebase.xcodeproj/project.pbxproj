@@ -36,6 +36,7 @@
 		9730E75623FBDC5400B8340C /* ChooseUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9730E75423FBDC5400B8340C /* ChooseUserTableViewCell.xib */; };
 		9730E75923FBDC6E00B8340C /* ChooseUserViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730E75823FBDC6E00B8340C /* ChooseUserViewController+TableView.swift */; };
 		9730E75B23FBE77500B8340C /* Class+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730E75A23FBE77500B8340C /* Class+Extension.swift */; };
+		9746AC6423FC9A81009E6EDB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746AC6323FC9A81009E6EDB /* UserModel.swift */; };
 		977406E423FC569F0029453E /* PictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977406E223FC569F0029453E /* PictureTableViewCell.swift */; };
 		977406E523FC569F0029453E /* PictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977406E323FC569F0029453E /* PictureTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		9730E75423FBDC5400B8340C /* ChooseUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseUserTableViewCell.xib; sourceTree = "<group>"; };
 		9730E75823FBDC6E00B8340C /* ChooseUserViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChooseUserViewController+TableView.swift"; sourceTree = "<group>"; };
 		9730E75A23FBE77500B8340C /* Class+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+Extension.swift"; sourceTree = "<group>"; };
+		9746AC6323FC9A81009E6EDB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		977406E223FC569F0029453E /* PictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTableViewCell.swift; sourceTree = "<group>"; };
 		977406E323FC569F0029453E /* PictureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureTableViewCell.xib; sourceTree = "<group>"; };
 		B1C3788EA23D6F27949DB16F /* Pods-UserFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserFirebase.debug.xcconfig"; path = "Target Support Files/Pods-UserFirebase/Pods-UserFirebase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,13 +115,14 @@
 			children = (
 				9730E72523FBD80D00B8340C /* GoogleService-Info.plist */,
 				9730E71123FBD57200B8340C /* AppDelegate.swift */,
+				9730E71323FBD57200B8340C /* SceneDelegate.swift */,
+				9746AC6523FC9A85009E6EDB /* Model */,
 				9730E73923FBDAAA00B8340C /* Select */,
 				9730E72D23FBDA1C00B8340C /* UserList */,
 				9730E73423FBDA5700B8340C /* Profile */,
 				9730E73E23FBDB1A00B8340C /* AddNewUser */,
 				9730E74323FBDB7800B8340C /* ChooseUser */,
 				9730E74823FBDBB800B8340C /* AddInfo */,
-				9730E71323FBD57200B8340C /* SceneDelegate.swift */,
 				97DB022E23FBEC24005171E9 /* Storyboard */,
 				9730E75C23FBE77A00B8340C /* UIExtension */,
 				9730E71A23FBD57300B8340C /* Assets.xcassets */,
@@ -223,6 +226,14 @@
 				9730E75A23FBE77500B8340C /* Class+Extension.swift */,
 			);
 			path = UIExtension;
+			sourceTree = "<group>";
+		};
+		9746AC6523FC9A85009E6EDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9746AC6323FC9A81009E6EDB /* UserModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		977406E623FC56A30029453E /* PictureCell */ = {
@@ -387,6 +398,7 @@
 				9730E73323FBDA5300B8340C /* ProfileViewController+Extension.swift in Sources */,
 				9730E72C23FBDA1800B8340C /* UserListViewController+Extension.swift in Sources */,
 				9730E75023FBDC2400B8340C /* ProfileTableViewCell.swift in Sources */,
+				9746AC6423FC9A81009E6EDB /* UserModel.swift in Sources */,
 				9730E72F23FBDA3E00B8340C /* ProfileViewController.swift in Sources */,
 				9730E71223FBD57200B8340C /* AppDelegate.swift in Sources */,
 				9730E73823FBDAA200B8340C /* SelectViewController+Extension.swift in Sources */,
