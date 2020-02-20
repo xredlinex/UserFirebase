@@ -12,16 +12,16 @@ import Toast_Swift
 
 extension NewUserViewController {
     
-    func updateDateBase(_ newUserToBase: [String : Any]) {
+    func updateDateBase(_ newUser: [String : Any]) {
         
         self.view.makeToastActivity(.center)
         ref.observeSingleEvent(of: .value) { (snapshot) in
             if let value = snapshot.value as? [String : Any] {
                 if let users = value["users"] as? [String : Any] {
                     self.userDateBase = users
-                    let random = Int.random(in: 1...1001)
-                    let id: String = "ID" + "\(random)" + "-" + "\(self.userDateBase.count)"
-                    self.userDateBase[id] = newUserToBase
+                    if let id = newUser["userId"] {
+                        self.userDateBase["\(id)"] = newUser
+                    }
                     self.ref.child("users").setValue(self.userDateBase)
                     self.view.hideToastActivity()
                     self.registrationAlert()
@@ -52,10 +52,16 @@ extension NewUserViewController {
         let isvalidateCity = validation.validateString(city)
         
         if isvalidateName && isvalidateSurname && isvalidateAge && isvalidateCity {
-            newUser = ["name" : name,
+            
+            let random = Int.random(in: 1...1001)
+            let id: String = "ID" + "\(random)" + "-" + "\(self.userDateBase.count)"
+            
+            newUser = ["userId" : id,
+                       "name" : name,
                        "surname": surname,
                        "age" : age,
                        "city": city]
+            
         } else {
             var validateText = ""
             

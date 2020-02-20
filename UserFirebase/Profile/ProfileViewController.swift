@@ -37,8 +37,6 @@ class ProfileViewController: UIViewController {
             userProperties = properties
         }
         
-        
-        
         if let name = user?.name {
             userValues.append(Objects(objectKey: "name", objectValue: name))
         }

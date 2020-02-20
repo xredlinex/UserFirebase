@@ -17,6 +17,7 @@ class Validation {
         let isvalidateString = validateString.evaluate(with: trimmedString)
         return isvalidateString
     }
+
     
     public func validateAge(_ age: Int) -> Bool {
         if age >= 18 && age <= 99 {

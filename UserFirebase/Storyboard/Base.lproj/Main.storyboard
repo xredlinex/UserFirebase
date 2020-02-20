@@ -817,7 +817,7 @@
                                                             <constraint firstAttribute="height" constant="34" id="JAq-44-wKW"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardAppearance="alert" returnKeyType="next"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name of property" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5d-JR-bEm">
                                                         <rect key="frame" x="20" y="8" width="134" height="16"/>
@@ -857,7 +857,7 @@
                                                             <constraint firstAttribute="height" constant="34" id="Bpa-on-uHs"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="done"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="new value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfX-1o-N7J">
                                                         <rect key="frame" x="20" y="8" width="134" height="16"/>
@@ -896,6 +896,9 @@
                                                         <state key="normal" title="add new field">
                                                             <color key="titleColor" red="0.50588235290000005" green="0.2666666667" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didTapAddPropertiesActionButton:" destination="Cxe-WE-W8h" eventType="touchUpInside" id="0ZB-Vx-Fho"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -949,8 +952,9 @@
                     </view>
                     <connections>
                         <outlet property="addNewFieldButton" destination="w0B-Q9-fo1" id="owS-cJ-ygi"/>
-                        <outlet property="propertyKeyTextField" destination="LU8-iL-tYn" id="8tc-S9-CmC"/>
-                        <outlet property="propertyValueTextField" destination="nx1-SD-cyV" id="0pe-2g-eoA"/>
+                        <outlet property="bottomHeightConstraint" destination="ONG-Rm-fvN" id="bqF-1c-R0l"/>
+                        <outlet property="propertiesKeyTextField" destination="LU8-iL-tYn" id="8tc-S9-CmC"/>
+                        <outlet property="propertiesValueTextField" destination="nx1-SD-cyV" id="0pe-2g-eoA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qR5-6B-t0P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
