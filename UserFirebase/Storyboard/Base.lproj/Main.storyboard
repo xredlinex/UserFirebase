@@ -949,6 +949,8 @@
                     </view>
                     <connections>
                         <outlet property="addNewFieldButton" destination="w0B-Q9-fo1" id="owS-cJ-ygi"/>
+                        <outlet property="propertyKeyTextField" destination="LU8-iL-tYn" id="8tc-S9-CmC"/>
+                        <outlet property="propertyValueTextField" destination="nx1-SD-cyV" id="0pe-2g-eoA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qR5-6B-t0P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

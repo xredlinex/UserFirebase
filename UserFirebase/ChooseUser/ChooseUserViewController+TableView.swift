@@ -16,11 +16,12 @@ extension ChooseUserViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseUserTableViewCell", for: indexPath) as! ChooseUserTableViewCell
+        cell.updateUserDataCell(users[indexPath.row])
         return cell
     }
     

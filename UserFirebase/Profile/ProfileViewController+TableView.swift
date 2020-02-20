@@ -12,7 +12,7 @@ import UIKit
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,8 +20,11 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
         switch section {
         case 0:
             return 1
+        case 1:
+            return userValues.count
         default:
-            return 10
+            
+            return objectAtrray.count
         }
         
     }
@@ -32,8 +35,16 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PictureTableViewCell", for: indexPath) as! PictureTableViewCell
             cell.updateUserPicture("blank")
             return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as! ProfileTableViewCell
+            cell.keyTextLabel.text = userValues[indexPath.row].objectKey
+            cell.valueTextLabel.text = userValues[indexPath.row].objectValue as? String
+            return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as! ProfileTableViewCell
+            cell.keyTextLabel.text = objectAtrray[indexPath.row].objectKey
+            cell.valueTextLabel.text = objectAtrray[indexPath.row].objectValue as? String
+            
             return cell
         }
     }

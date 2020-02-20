@@ -11,17 +11,20 @@ import UIKit
 class ChooseUserTableViewCell: UITableViewCell {
     
     @IBOutlet weak var userInfoView: UIView!
+    @IBOutlet weak var userNameTextLabel: UILabel!
+    @IBOutlet weak var userSurnameTextLabel: UILabel!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         userInfoView.addCellSetUp()
     }
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+extension ChooseUserTableViewCell {
     
+    func updateUserDataCell(_ user: User) {
+        
+        userNameTextLabel.text = user.name ?? "-"
+        userSurnameTextLabel.text = user.surname ?? "-"
+    }
 }

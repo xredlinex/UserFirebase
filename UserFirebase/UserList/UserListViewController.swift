@@ -15,7 +15,6 @@ class UserListViewController: UIViewController {
     
     var ref: DatabaseReference = Database.database().reference(fromURL: "https://userfirebase-3f732.firebaseio.com/")
     var usersDateBase: [String : Any] = [:]
-    
     var users = [User]()
     
     override func viewDidLoad() {
@@ -25,6 +24,7 @@ class UserListViewController: UIViewController {
         
         screenSetupBackground()
         
+       
         tableView.register(UINib(nibName: "UsersTableViewCell", bundle: nil), forCellReuseIdentifier: "UsersTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self

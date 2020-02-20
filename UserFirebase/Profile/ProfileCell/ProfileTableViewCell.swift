@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var userKeyRowView: UIView!
     @IBOutlet weak var keyTextLabel: UILabel!
     @IBOutlet weak var valueTextLabel: UILabel!
@@ -19,10 +19,14 @@ class ProfileTableViewCell: UITableViewCell {
         super.awakeFromNib()
         userKeyRowView.addCellSetUp()
     }
+}
 
-    func updateProfileCell() {
+extension ProfileTableViewCell {
+    
+    func updateProfileCell(_ userValues: [String : Any]) {
         
-        
+//        keyTextLabel.text = userValues.keys
+//        valueTextLabel.text = userValues.values
         
     }
     

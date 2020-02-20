@@ -43,14 +43,3 @@ extension UserListViewController {
         }
     }
 }
-
-extension UserListViewController {
-    
-    func prepareUserBase() {
-        
-        
-        
-        
-    }
-    
-}

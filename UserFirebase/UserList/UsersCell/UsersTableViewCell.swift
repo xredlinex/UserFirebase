@@ -26,14 +26,11 @@ extension UsersTableViewCell {
     
     func updateUserData(_ user: User) {
         
-        userNameTextLabel.text = user.name ?? ""
-        userSurnameTextLabel.text = user.surname ?? ""
+        userNameTextLabel.text = user.name ?? "-"
+        userSurnameTextLabel.text = user.surname ?? "-"
 
     }
 }
-
-
-
 
 extension UsersTableViewCell {
     
