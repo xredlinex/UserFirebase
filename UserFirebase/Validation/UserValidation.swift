@@ -18,11 +18,11 @@ class Validation {
         return isvalidateString
     }
     
+    public func validateCity(_ string: String) -> Bool {
+        return 3...100 ~= string.count
+    }
+    
     public func validateAge(_ age: Int) -> Bool {
-        if age >= 18 && age <= 99 {
-            return true
-        } else {
-            return false
-        }
+        return 18...99 ~= age
     }
 }
