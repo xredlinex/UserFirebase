@@ -93,8 +93,8 @@ extension NewUserViewController {
     func registrationAlert() {
         let alertController = UIAlertController(title: "Succes!", message: "Registration Complete", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default) { (_) in
-            let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
-            self.navigationController?.pushViewController(viewcontroller, animated: false)
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
+            self.navigationController?.pushViewController(viewController, animated: false)
         }
         alertController.addAction(alertAction)
         present(alertController, animated: true, completion: nil)

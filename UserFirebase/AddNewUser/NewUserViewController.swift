@@ -26,7 +26,7 @@ class NewUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        screenSetupBackground(addBlur: false, 0.4)
+        screenSetupBackground(addBlur: true, 0)
         addNewUserButtonView.customSetupView(effectStyle: .systemMaterialLight, radius: 12.0, alpha: 0.8)
         
         userNameTextField.delegate = self

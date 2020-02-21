@@ -21,7 +21,7 @@ class UserListViewController: UIViewController {
         super.viewDidLoad()
         
         getUsers()
-        screenSetupBackground(addBlur: false, 0.4)
+        screenSetupBackground(addBlur: true, 0)
 
         tableView.register(UINib(nibName: "UsersTableViewCell", bundle: nil), forCellReuseIdentifier: "UsersTableViewCell")
         tableView.delegate = self
@@ -30,7 +30,7 @@ class UserListViewController: UIViewController {
     }
     
     @IBAction func didTapGoBackActionButton(_ sender: Any) {
-        let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectViewController") as! SelectViewController
-        navigationController?.pushViewController(viewcontroller, animated: false)
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectViewController") as! SelectViewController
+        navigationController?.pushViewController(viewController, animated: false)
     }
 }
