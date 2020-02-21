@@ -22,7 +22,6 @@ class AddInfoViewController: UIViewController {
     @IBOutlet weak var bottomHeightConstraint: NSLayoutConstraint!
     
     var user: User?
-    var userProperties = [UserValues]()
     var userDateBase: [String : Any] = [:]
     var ref: DatabaseReference = Database.database().reference(fromURL: "https://userfirebase-3f732.firebaseio.com/")
  

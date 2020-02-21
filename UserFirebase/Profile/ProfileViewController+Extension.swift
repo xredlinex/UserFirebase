@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+
+//struct UserValues {
+//    var userValueKey: String?
+//    var usetValueValue: Any?
+//}
+
+extension ProfileViewController {
+    
+    func transformData() {
+        
+        if let properties = user?.optionalValues {
+            for (key, value) in properties {
+                userOptionalValues?.append(UserValues(userValueKey: key, usetValueValue: value))
+            }
+        }
+    }
+}
