@@ -1,5 +1,5 @@
 //
-//  UserListViewController+Extension.swift
+//  ChooseUserViewController+Extension.swift
 //  UserFirebase
 //
 //  Created by alexey sorochan on 18.02.2020.
@@ -11,21 +11,22 @@ import UIKit
 import FirebaseDatabase
 import Toast_Swift
 
-extension UserListViewController {
+extension ChooseUserViewController {
     
     func getUsers() {
         
-        self.view.makeToastActivity(.center)
+        self.view.makeToastActivity(ToastPosition.center)
+        
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             if let value = snapshot.value as? [String : Any] {
                 if let users = value["users"] as? [String: Any] {
                     self.usersDateBase = users
-                    for (_ , item) in self.usersDateBase {
-                        let userBase = User(fromDict: item as! [String : AnyObject])
-                        self.users.append(userBase)
+                        for (_ , item) in self.usersDateBase {
+                            let userBase = User(fromDict: item as! [String : AnyObject])
+                            self.users.append(userBase)
+                        }
                         self.tableView.reloadData()
                         self.view.hideToastActivity()
-                    }
                 } else {
                     self.view.hideToastActivity()
                     self.presentErrorAlert("Sorry No Üsers Found:(")
@@ -40,11 +41,11 @@ extension UserListViewController {
     }
 }
 
-extension UserListViewController {
-    
-    func viewUserProfile(_ user: User) {
-        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-        viewController.user = user
-        navigationController?.pushViewController(viewController, animated: false)
+extension ChooseUserViewController {
+    func presentErrorAlert(_ message: String) {
+        let alertController = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default) { (_) in }
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
     }
 }

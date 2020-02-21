@@ -100,3 +100,12 @@ extension NewUserViewController {
         present(alertController, animated: true, completion: nil)
     }
 }
+
+extension NewUserViewController {
+    func presentErrorAlert(_ message: String) {
+        let alertController = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default) { (_) in }
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+    }
+}

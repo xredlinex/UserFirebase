@@ -16,8 +16,5 @@ extension SelectViewController {
         userListView.customSetupView(effectStyle: .systemMaterialDark, radius: 12, alpha: 0.8)
         newUserView.customSetupView(effectStyle: .systemMaterialDark, radius: 12, alpha: 0.8)
         addInfoView.customSetupView(effectStyle: .systemMaterialDark, radius: 12, alpha: 0.8)
-//                userListView.mainSreenSetupButtons()
-//                newUserView.mainSreenSetupButtons()
-//                addInfoView.mainSreenSetupButtons()
     }
 }

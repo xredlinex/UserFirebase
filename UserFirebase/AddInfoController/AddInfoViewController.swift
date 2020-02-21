@@ -30,8 +30,6 @@ class AddInfoViewController: UIViewController {
         super.viewDidLoad()
         screenSetupBackground(addBlur: true, 0)
         addNewFieldButton.customSetupView(effectStyle: .systemMaterialLight, radius: 12.0, alpha: 0.8)
-//        addNewFieldButton.addSreenSetupButtons()
-        
 
         let keyboardWiilHide = UITapGestureRecognizer(target: self, action: #selector(keyboardHide))
         view.addGestureRecognizer(keyboardWiilHide)

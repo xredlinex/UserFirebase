@@ -17,7 +17,6 @@ class ProfileTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         userKeyRowView.customSetupView(effectStyle: .systemUltraThinMaterialDark, radius: 12.0, alpha: 0.8)
-//        userKeyRowView.addCellSetUp()
     }
 }
 

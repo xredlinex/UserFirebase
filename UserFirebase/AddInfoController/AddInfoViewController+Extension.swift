@@ -16,6 +16,7 @@ extension AddInfoViewController {
         
         if let newKey = propertiesKeyTextField.text, newKey != "" {
             if let newValue = propertiesValueTextField.text, newValue != "" {
+
                 self.view.makeToastActivity(.center)
                 ref.observeSingleEvent(of: .value) { (snapshot) in
                     if let value = snapshot.value as? [String : Any] {
@@ -117,5 +118,15 @@ extension AddInfoViewController {
     func navigateToListController() {
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
         self.navigationController?.pushViewController(viewController, animated: false)
+    }
+}
+
+extension AddInfoViewController {
+    
+    func presentErrorAlert(_ message: String) {
+        let alertController = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default) { (_) in }
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
     }
 }

@@ -28,7 +28,6 @@ class NewUserViewController: UIViewController {
 
         screenSetupBackground(addBlur: true, 0)
         addNewUserButtonView.customSetupView(effectStyle: .systemMaterialLight, radius: 12.0, alpha: 0.8)
-//        addNewUserButtonView.addSreenSetupButtons()
         
         userNameTextField.delegate = self
         userSurnameTextField.delegate = self

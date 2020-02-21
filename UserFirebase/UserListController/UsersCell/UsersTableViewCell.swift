@@ -29,7 +29,10 @@ extension UsersTableViewCell {
         userNameTextLabel.text = user.name ?? "-"
         userSurnameTextLabel.text = user.surname ?? "-"
         
-        if let url = URL(string: user.picture ?? "-") {
+        
+        
+        
+        if let url = URL(string: user.picture ?? "") {
             userImageView.kf.setImage(with: url)
         } else {
             userImageView.image = UIImage(named: "blank")
@@ -42,8 +45,7 @@ extension UsersTableViewCell {
     func setupUiForCell() {
         
         userContentView.customSetupView(effectStyle: .systemUltraThinMaterialDark, radius: 12.0, alpha: 0.8)
-//        userContentView.addCellSetUp()
-        userImageView.image = UIImage(named: "blank")
+//        userImageView.image = UIImage(named: "blank")
         containerImageView.clipsToBounds = true
         containerImageView.layer.cornerRadius = containerImageView.frame.width / 2
         containerImageView.layer.borderColor = UIColor(red: 118/255, green: 59/255, blue: 90/255, alpha: 1).cgColor
