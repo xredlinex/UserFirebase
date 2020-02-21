@@ -32,8 +32,8 @@ struct UserValues {
 }
 
 
-struct Objects {
-    var objectKey: String?
-    var objectValue: Any?
-}
+//struct Objects {
+//    var objectKey: String?
+//    var objectValue: Any?
+//}
 

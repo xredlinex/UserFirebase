@@ -23,8 +23,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:
             return userValues.count
         default:
-            
-            return objectAtrray.count
+            return userOptionalValues.count
         }
         
     }
@@ -37,13 +36,13 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as! ProfileTableViewCell
-            cell.keyTextLabel.text = userValues[indexPath.row].objectKey
-            cell.valueTextLabel.text = userValues[indexPath.row].objectValue as? String
+            cell.keyTextLabel.text = userValues[indexPath.row].userValueKey
+            cell.valueTextLabel.text = userValues[indexPath.row].usetValueValue as? String
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as! ProfileTableViewCell
-            cell.keyTextLabel.text = objectAtrray[indexPath.row].objectKey
-            cell.valueTextLabel.text = objectAtrray[indexPath.row].objectValue as? String
+            cell.keyTextLabel.text = userOptionalValues[indexPath.row].userValueKey
+            cell.valueTextLabel.text = userOptionalValues[indexPath.row].usetValueValue as? String
             
             return cell
         }

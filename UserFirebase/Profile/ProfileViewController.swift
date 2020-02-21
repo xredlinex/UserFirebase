@@ -21,46 +21,49 @@ class ProfileViewController: UIViewController {
     
   
     
-    var userProperties: [String : Any] = [:]
+//    var userProperties: [String : Any] = [:]
 //    var userProperties: [String : Any]?
-    var objectAtrray = [Objects]()
+//    var objectAtrray = [Objects]()
  
-    var userValues = [Objects]()
+//    var userValues = [Objects]()
     
 // MARK: - data -
     var user: User?
-//    var userValues: [UserValues]
-    var userOptionalValues: [UserValues]?
+    var userValues = [UserValues]()
+    var userOptionalValues = [UserValues]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         screenSetupBackground()
+        transformData()
+        debugPrint(userValues.count)
+        debugPrint(userOptionalValues.count)
         
-        if let properties = user?.optionalValues {
-            userProperties = properties
-        }
+//        if let properties = user?.optionalValues {
+//            userProperties = properties
+//        }
         
-        if let name = user?.name {
-            userValues.append(Objects(objectKey: "name", objectValue: name))
-        }
-        if let surname = user?.surname {
-            userValues.append(Objects(objectKey: "surname", objectValue: surname))
-        }
-        if let age = user?.age {
-            debugPrint(age)
-            userValues.append(Objects(objectKey: "age", objectValue: age))
-        }
-        if let city = user?.city {
-            userValues.append(Objects(objectKey: "city", objectValue: city))
-        }
-        
+//        if let name = user?.name {
+//            userValues.append(Objects(objectKey: "name", objectValue: name))
+//        }
+//        if let surname = user?.surname {
+//            userValues.append(Objects(objectKey: "surname", objectValue: surname))
+//        }
+//        if let age = user?.age {
+//            debugPrint(age)
+//            userValues.append(Objects(objectKey: "age", objectValue: age))
+//        }
+//        if let city = user?.city {
+//            userValues.append(Objects(objectKey: "city", objectValue: city))
+//        }
+//
 
         
-        for (key, value) in userProperties {
-            debugPrint("\(key) -> \(value)")
-            objectAtrray.append(Objects(objectKey: key, objectValue: value))
-        }
+//        for (key, value) in userProperties {
+//            debugPrint("\(key) -> \(value)")
+//            objectAtrray.append(Objects(objectKey: key, objectValue: value))
+//        }
         
         tableView.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")
         tableView.register(UINib(nibName: "PictureTableViewCell", bundle: nil), forCellReuseIdentifier: "PictureTableViewCell")
