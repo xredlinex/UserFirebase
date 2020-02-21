@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        screenSetupBackground()
+        screenSetupBackground(addBlur: false, 0.4)
         transformData()
     
         tableView.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")

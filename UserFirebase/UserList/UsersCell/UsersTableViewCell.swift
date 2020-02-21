@@ -41,7 +41,7 @@ extension UsersTableViewCell {
     
     func setupUiForCell() {
         
-        userContentView.addCellSetUp()
+        userContentView.customSetupView(effectStyle: .systemUltraThinMaterialDark, radius: 12.0, alpha: 0.8)
         userImageView.image = UIImage(named: "blank")
         containerImageView.clipsToBounds = true
         containerImageView.layer.cornerRadius = containerImageView.frame.width / 2

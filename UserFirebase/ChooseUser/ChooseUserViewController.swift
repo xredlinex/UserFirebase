@@ -21,7 +21,7 @@ class ChooseUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        screenSetupBackground()
+        screenSetupBackground(addBlur: false, 0.4)
         getUsers()
         
         tableView.register(UINib(nibName: "ChooseUserTableViewCell", bundle: nil), forCellReuseIdentifier: "ChooseUserTableViewCell")

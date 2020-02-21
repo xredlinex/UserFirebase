@@ -12,9 +12,9 @@ extension SelectViewController {
     
     func uiSetup() {
         
-        mainScreenSetupBackground("https://media.giphy.com/media/SpoZWVAYlMCMGcLfqU/giphy.gif")
-        userListView.mainSreenSetupButtons()
-        newUserView.mainSreenSetupButtons()
-        addInfoView.mainSreenSetupButtons()
+        screenSetupBackground(addBlur: false, 0.4)
+        userListView.customSetupView(effectStyle: .systemMaterialDark, radius: 12, alpha: 0.8)
+        newUserView.customSetupView(effectStyle: .systemMaterialDark, radius: 12, alpha: 0.8)
+        addInfoView.customSetupView(effectStyle: .systemMaterialDark, radius: 12, alpha: 0.8)
     }
 }

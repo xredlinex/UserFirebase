@@ -16,7 +16,7 @@ class ChooseUserTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        userInfoView.addCellSetUp()
+        userInfoView.customSetupView(effectStyle: .systemUltraThinMaterialDark, radius: 12.0, alpha: 0.8)
     }
 }
 

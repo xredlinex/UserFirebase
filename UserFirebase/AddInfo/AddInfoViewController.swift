@@ -28,9 +28,8 @@ class AddInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        screenSetupBackground()
-        addNewFieldButton.addSreenSetupButtons()
+        screenSetupBackground(addBlur: true, 0)
+        addNewFieldButton.customSetupView(effectStyle: .systemMaterialLight, radius: 12.0, alpha: 0.8)
         
 
         let keyboardWiilHide = UITapGestureRecognizer(target: self, action: #selector(keyboardHide))
@@ -38,6 +37,10 @@ class AddInfoViewController: UIViewController {
         propertiesKeyTextField.delegate = self
         propertiesValueTextField.delegate = self
 
+    }
+    
+    @IBAction func didTapAddPictureLinkActionButton(_ sender: Any) {
+        addUserPicture()
     }
     
 
@@ -49,4 +52,7 @@ class AddInfoViewController: UIViewController {
         addNewProperties()
         
     }
+    
 }
+
+

@@ -32,9 +32,7 @@ extension AddInfoViewController {
                                     self.userDateBase[id] = user
                                     self.ref.child("users").setValue(self.userDateBase)
                                     self.view.hideToastActivity()
-                                    let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
-                                    self.navigationController?.pushViewController(viewController, animated: false)
-                                    
+                                    self.navigateToListController()
                                 }
                             }
                         }
@@ -46,6 +44,41 @@ extension AddInfoViewController {
         } else {
             presentErrorAlert("Key value is empty")
         }
+    }
+}
+
+extension AddInfoViewController {
+    
+    func addUserPicture() {
+        
+        let alertController = UIAlertController(title: "Add Link To Picture", message: nil, preferredStyle: .alert)
+        alertController.addTextField()
+        let addPictureAction = UIAlertAction(title: "Set Picture", style: .default) { (_) in
+            let textfield = alertController.textFields! [0]
+            let pictureLink = textfield.text
+            self.view.makeToastActivity(.center)
+            self.ref.observeSingleEvent(of: .value) { (snapshot) in
+                if let value = snapshot.value as? [String : Any] {
+                    if let users = value["users"] as? [String : Any] {
+                        self.userDateBase = users
+                        if let id = self.user?.userId {
+                            if var user = self.userDateBase[id] as? [String : Any] {
+                                user["picture"] = pictureLink
+                                self.userDateBase[id] = user
+                                self.ref.child("users").setValue(self.userDateBase)
+                                self.view.hideToastActivity()
+                                self.view.makeToast("Picture Link Added")
+                                self.navigateToListController()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        alertController.addAction(cancelAction)
+        alertController.addAction(addPictureAction)
+        present(alertController, animated: true)
     }
 }
 
@@ -64,7 +97,6 @@ extension AddInfoViewController: UITextFieldDelegate {
         case propertiesValueTextField:
             propertiesValueTextField.resignFirstResponder()
             bottomHeightConstraint.constant = 0
-            debugPrint("keyib hide")
         default:
             propertiesKeyTextField.becomeFirstResponder()
         }
@@ -77,5 +109,13 @@ extension AddInfoViewController {
     @objc func keyboardHide() {
         bottomHeightConstraint.constant = 0
         self.view.endEditing(true)
+    }
+}
+
+extension AddInfoViewController {
+    
+    func navigateToListController() {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
+        self.navigationController?.pushViewController(viewController, animated: false)
     }
 }

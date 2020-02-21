@@ -21,7 +21,7 @@ class UserListViewController: UIViewController {
         super.viewDidLoad()
         
         getUsers()
-        screenSetupBackground()
+        screenSetupBackground(addBlur: false, 0.4)
 
         tableView.register(UINib(nibName: "UsersTableViewCell", bundle: nil), forCellReuseIdentifier: "UsersTableViewCell")
         tableView.delegate = self

@@ -42,6 +42,9 @@
 		9765D2FF23FDACCA00225D9E /* NewUserViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765D2FE23FDACCA00225D9E /* NewUserViewController+TextField.swift */; };
 		977406E423FC569F0029453E /* PictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977406E223FC569F0029453E /* PictureTableViewCell.swift */; };
 		977406E523FC569F0029453E /* PictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977406E323FC569F0029453E /* PictureTableViewCell.xib */; };
+		97BAC8D624007ED9005D6DBB /* back.gif in Resources */ = {isa = PBXBuildFile; fileRef = 97BAC8D524007ED9005D6DBB /* back.gif */; };
+		97BAC8D8240082FD005D6DBB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAC8D7240082FD005D6DBB /* UIView+Extension.swift */; };
+		97EF32E924007BA6009581D2 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF32E824007BA6009581D2 /* ViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +86,9 @@
 		9765D2FE23FDACCA00225D9E /* NewUserViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewUserViewController+TextField.swift"; sourceTree = "<group>"; };
 		977406E223FC569F0029453E /* PictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTableViewCell.swift; sourceTree = "<group>"; };
 		977406E323FC569F0029453E /* PictureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureTableViewCell.xib; sourceTree = "<group>"; };
+		97BAC8D524007ED9005D6DBB /* back.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = back.gif; sourceTree = "<group>"; };
+		97BAC8D7240082FD005D6DBB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		97EF32E824007BA6009581D2 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		B1C3788EA23D6F27949DB16F /* Pods-UserFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserFirebase.debug.xcconfig"; path = "Target Support Files/Pods-UserFirebase/Pods-UserFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +139,7 @@
 				97DB022E23FBEC24005171E9 /* Storyboard */,
 				9730E75C23FBE77A00B8340C /* UIExtension */,
 				9730E71A23FBD57300B8340C /* Assets.xcassets */,
+				97BAC8D524007ED9005D6DBB /* back.gif */,
 				9730E71C23FBD57300B8340C /* LaunchScreen.storyboard */,
 				9730E71F23FBD57300B8340C /* Info.plist */,
 			);
@@ -232,7 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				9730E75A23FBE77500B8340C /* Class+Extension.swift */,
+				97EF32E824007BA6009581D2 /* ViewController+Extension.swift */,
 				9765D2F923FDA2DA00225D9E /* Alert+Extension.swift */,
+				97BAC8D7240082FD005D6DBB /* UIView+Extension.swift */,
 			);
 			path = UIExtension;
 			sourceTree = "<group>";
@@ -354,6 +363,7 @@
 				9730E74C23FBDC0C00B8340C /* UsersTableViewCell.xib in Resources */,
 				9730E71923FBD57200B8340C /* Main.storyboard in Resources */,
 				9730E75123FBDC2400B8340C /* ProfileTableViewCell.xib in Resources */,
+				97BAC8D624007ED9005D6DBB /* back.gif in Resources */,
 				9730E75623FBDC5400B8340C /* ChooseUserTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +431,7 @@
 				9730E72F23FBDA3E00B8340C /* ProfileViewController.swift in Sources */,
 				9730E71223FBD57200B8340C /* AppDelegate.swift in Sources */,
 				9730E73823FBDAA200B8340C /* SelectViewController+Extension.swift in Sources */,
+				97EF32E924007BA6009581D2 /* ViewController+Extension.swift in Sources */,
 				9730E74523FBDBA400B8340C /* AddInfoViewController.swift in Sources */,
 				9730E74023FBDB6800B8340C /* ChooseUserViewController.swift in Sources */,
 				9730E73123FBDA4A00B8340C /* ProfileViewController+TableView.swift in Sources */,
@@ -428,6 +439,7 @@
 				9765D2FF23FDACCA00225D9E /* NewUserViewController+TextField.swift in Sources */,
 				9730E74223FBDB7500B8340C /* ChooseUserViewController+Extension.swift in Sources */,
 				9730E74723FBDBB400B8340C /* AddInfoViewController+Extension.swift in Sources */,
+				97BAC8D8240082FD005D6DBB /* UIView+Extension.swift in Sources */,
 				9730E74B23FBDC0C00B8340C /* UsersTableViewCell.swift in Sources */,
 				9730E75B23FBE77500B8340C /* Class+Extension.swift in Sources */,
 				9730E71423FBD57200B8340C /* SceneDelegate.swift in Sources */,
