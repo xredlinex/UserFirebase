@@ -14,7 +14,6 @@ extension ProfileViewController {
         
         if let name = user?.name {
             userValues.append(UserValues(userValueKey: "name", userValueValue: name))
-            debugPrint(name)
         }
         if let surname = user?.surname {
             userValues.append(UserValues(userValueKey: "surname", userValueValue: surname))
@@ -32,3 +31,4 @@ extension ProfileViewController {
         }
     }
 }
+

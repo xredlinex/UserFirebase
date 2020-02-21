@@ -22,14 +22,12 @@ extension ChooseUserViewController {
                 debugPrint(value)
                 if let users = value["users"] as? [String: Any] {
                     self.usersDateBase = users
-                    DispatchQueue.main.async {
                         for (_ , item) in self.usersDateBase {
                             let userBase = User(fromDict: item as! [String : AnyObject])
                             self.users.append(userBase)
                         }
                         self.tableView.reloadData()
                         self.view.hideToastActivity()
-                    }
                 } else {
                     self.view.hideToastActivity()
                     self.presentErrorAlert("Sorry No Üsers Found:(")

@@ -21,6 +21,7 @@ class NewUserViewController: UIViewController {
     let validation = Validation()
     var ref: DatabaseReference = Database.database().reference(fromURL: "https://userfirebase-3f732.firebaseio.com/")
     var userDateBase: [String : Any] = [:]
+    var newUser: [String : Any] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +44,6 @@ class NewUserViewController: UIViewController {
     }
     
     @IBAction func didTapAddNewUserActionButton(_ sender: Any) {
-        let user = makeNewUser()
-        updateDateBase(user)
+        makeNewUser()
     }
 }

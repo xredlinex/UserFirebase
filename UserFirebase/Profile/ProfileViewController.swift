@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController {
 
         screenSetupBackground()
         transformData()
-
+    
         tableView.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")
         tableView.register(UINib(nibName: "PictureTableViewCell", bundle: nil), forCellReuseIdentifier: "PictureTableViewCell")
         tableView.delegate = self

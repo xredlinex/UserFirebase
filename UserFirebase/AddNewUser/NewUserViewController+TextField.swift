@@ -20,7 +20,7 @@ extension NewUserViewController {
 extension NewUserViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        bottomHeightConstraint.constant = 310
+        bottomHeightConstraint.constant = 312
         return true
     }
     

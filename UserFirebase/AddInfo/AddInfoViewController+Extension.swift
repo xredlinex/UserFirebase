@@ -50,12 +50,10 @@ extension AddInfoViewController {
 }
 
 
-
-
 extension AddInfoViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        bottomHeightConstraint.constant = 310
+        bottomHeightConstraint.constant = 220
         return true
     }
 
@@ -64,8 +62,9 @@ extension AddInfoViewController: UITextFieldDelegate {
         case propertiesKeyTextField:
             propertiesValueTextField.becomeFirstResponder()
         case propertiesValueTextField:
-            bottomHeightConstraint.constant = 0
             propertiesValueTextField.resignFirstResponder()
+            bottomHeightConstraint.constant = 0
+            debugPrint("keyib hide")
         default:
             propertiesKeyTextField.becomeFirstResponder()
         }

@@ -37,34 +37,32 @@ extension NewUserViewController {
 
 extension NewUserViewController {
     
-    func makeNewUser() -> [String : Any] {
+    func makeNewUser() {
         
-        var newUser: [String : Any] = [:]
+        guard let name = userNameTextField.text,
+              let surname = userSurnameTextField.text,
+              let age = userAgeTextField.text,
+              let city = userCityTextField.text
+        else { return }
         
-        guard let name = userNameTextField.text, let surname = userSurnameTextField.text, let age = userAgeTextField.text, let city = userCityTextField.text else {
-            presentErrorAlert("error")
-            return [:]
-        }
-        
+        let id: String = "ID" + "\(Int.random(in: 1...1001))" + "-" + "\(self.userDateBase.count)"
         let isvalidateName = validation.validateString(name)
         let isvalidateSurname = validation.validateString(surname)
         let isvalidateAge = validation.validateAge(Int(age) ?? 0)
-        let isvalidateCity = validation.validateString(city)
+        let isvalidateCity = validation.validateCity(city)
         
         if isvalidateName && isvalidateSurname && isvalidateAge && isvalidateCity {
-            
-            let random = Int.random(in: 1...1001)
-            let id: String = "ID" + "\(random)" + "-" + "\(self.userDateBase.count)"
-            
+
             newUser = ["userId" : id,
                        "name" : name,
                        "surname": surname,
                        "age" : age,
                        "city": city]
             
+            updateDateBase(newUser)
+            
         } else {
             var validateText = ""
-            
             if !isvalidateName {
                 validateText = validateText + ", Check Name Field"
             }
@@ -79,14 +77,20 @@ extension NewUserViewController {
             }
             presentErrorAlert("Validation Error" + "\(validateText)" + "!")
         }
-        return newUser
+    }
+}
+
+extension ChooseUserViewController {
+    func navigateToViewController (_ user: User) {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddInfoViewController") as! AddInfoViewController
+        viewController.user = user
+        navigationController?.pushViewController(viewController, animated: false)
     }
 }
 
 extension NewUserViewController {
     
     func registrationAlert() {
-        
         let alertController = UIAlertController(title: "Succes!", message: "Registration Complete", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default) { (_) in
             let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController

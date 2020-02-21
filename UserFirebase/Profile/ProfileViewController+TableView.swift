@@ -25,25 +25,21 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
         default:
             return userOptionalValues.count
         }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PictureTableViewCell", for: indexPath) as! PictureTableViewCell
-            cell.updateUserPicture("blank")
+            cell.updateUserPicture(user?.picture ?? "")
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as! ProfileTableViewCell
-            cell.keyTextLabel.text = userValues[indexPath.row].userValueKey
-            cell.valueTextLabel.text = userValues[indexPath.row].userValueValue as? String
+            cell.updateProfileCell(userValues[indexPath.row])
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as! ProfileTableViewCell
-            cell.keyTextLabel.text = userOptionalValues[indexPath.row].userValueKey
-            cell.valueTextLabel.text = userOptionalValues[indexPath.row].userValueValue as? String
-            
+            cell.updateProfileCell(userOptionalValues[indexPath.row])
             return cell
         }
     }
@@ -51,8 +47,6 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
-    
 }
 
 

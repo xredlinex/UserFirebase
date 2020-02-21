@@ -28,7 +28,12 @@ extension UsersTableViewCell {
         
         userNameTextLabel.text = user.name ?? "-"
         userSurnameTextLabel.text = user.surname ?? "-"
-
+        
+        if let url = URL(string: user.picture ?? "-") {
+            userImageView.kf.setImage(with: url)
+        } else {
+            userImageView.image = UIImage(named: "blank")
+        }
     }
 }
 

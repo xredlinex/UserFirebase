@@ -15,8 +15,7 @@ extension UserListViewController {
     
     func getUsers() {
         
-        self.view.makeToastActivity(ToastPosition.center)
-        
+        self.view.makeToastActivity(.center)
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             if let value = snapshot.value as? [String : Any] {
                 if let users = value["users"] as? [String: Any] {
@@ -47,7 +46,5 @@ extension UserListViewController {
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         viewController.user = user
         navigationController?.pushViewController(viewController, animated: false)
-        
-        
     }
 }
