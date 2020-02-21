@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import SwiftGifOrigin
+
+import Kingfisher
 
 extension UIViewController {
     
@@ -15,11 +16,11 @@ extension UIViewController {
 
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         let backgroundAlphaView = UIView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage.gif(name: "back")
+        let imgURL = URL(string: "https://i.giphy.com/media/SpoZWVAYlMCMGcLfqU/giphy.gif")
+        backgroundImage.kf.setImage(with: imgURL)
         backgroundImage.contentMode = .scaleAspectFill
         backgroundAlphaView.backgroundColor = UIColor(red: 28/255, green: 5/255, blue: 20/255, alpha: 1)
         backgroundAlphaView.alpha = alpha
-        
         if addBlur {
             let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.systemUltraThinMaterialDark)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)

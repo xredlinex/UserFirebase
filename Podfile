@@ -9,6 +9,5 @@ target 'UserFirebase' do
   pod 'FirebaseDatabase'
   pod 'Kingfisher'
   pod 'Toast-Swift', '~> 5.0.1'
-  pod 'SwiftGifOrigin', '~> 1.7.0'
 
 end
