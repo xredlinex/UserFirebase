@@ -28,12 +28,5 @@ class User {
 
 struct UserValues {
     var userValueKey: String?
-    var usetValueValue: Any?
+    var userValueValue: Any?
 }
-
-
-//struct Objects {
-//    var objectKey: String?
-//    var objectValue: Any?
-//}
-

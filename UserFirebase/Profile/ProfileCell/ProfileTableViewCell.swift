@@ -14,7 +14,6 @@ class ProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var keyTextLabel: UILabel!
     @IBOutlet weak var valueTextLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         userKeyRowView.addCellSetUp()
@@ -23,13 +22,10 @@ class ProfileTableViewCell: UITableViewCell {
 
 extension ProfileTableViewCell {
     
-    func updateProfileCell(_ userValues: [String : Any]) {
-        
-//        keyTextLabel.text = userValues.keys
-//        valueTextLabel.text = userValues.values
-        
+    func updateProfileCell(_ userValues: UserValues) {
+        keyTextLabel.text = userValues.userValueKey
+        valueTextLabel.text = "\(userValues.userValueValue ?? "-")"
     }
-    
 }
 
 

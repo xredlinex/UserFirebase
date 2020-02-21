@@ -19,14 +19,11 @@ extension UserListViewController {
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             if let value = snapshot.value as? [String : Any] {
-                debugPrint(value)
                 if let users = value["users"] as? [String: Any] {
                     self.usersDateBase = users
-                    DispatchQueue.main.async {
-                        for (_ , item) in self.usersDateBase {
-                            let userBase = User(fromDict: item as! [String : AnyObject])
-                            self.users.append(userBase)
-                        }
+                    for (_ , item) in self.usersDateBase {
+                        let userBase = User(fromDict: item as! [String : AnyObject])
+                        self.users.append(userBase)
                         self.tableView.reloadData()
                         self.view.hideToastActivity()
                     }
@@ -41,5 +38,16 @@ extension UserListViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
+    }
+}
+
+extension UserListViewController {
+    
+    func viewUserProfile(_ user: User) {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        viewController.user = user
+        navigationController?.pushViewController(viewController, animated: false)
+        
+        
     }
 }
