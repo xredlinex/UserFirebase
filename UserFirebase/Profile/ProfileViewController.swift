@@ -24,7 +24,7 @@ class ProfileViewController: UIViewController {
     var userProperties: [String : Any] = [:]
     var objectAtrray = [Objects]()
  
-   var userValues = [Objects]()
+    var userValues = [Objects]()
     
     
     

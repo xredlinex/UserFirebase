@@ -14,52 +14,29 @@ extension AddInfoViewController {
     
     func addNewProperties() {
         
-        if let newKey = propertiesValueTextField.text, newKey != "" {
+        if let newKey = propertiesKeyTextField.text, newKey != "" {
             if let newValue = propertiesValueTextField.text, newValue != "" {
-                
-               
-                
                 self.view.makeToastActivity(.center)
                 ref.observeSingleEvent(of: .value) { (snapshot) in
                     if let value = snapshot.value as? [String : Any] {
-                        if let users = value["users"] as? [String : AnyObject] {
+                        if let users = value["users"] as? [String : Any] {
                             self.userDateBase = users
-                            if let userId = self.user?.userId {
-                                self.userProperties.append(UserValues(userValueKey: newKey, usetValueValue: newValue))
-//                                userDateBase[userId]?["optionalValues"] = self.userProperties
-//                                userDateBase[userId]["optionalValues"][newKey] = [newValue]
-//                                userDateBase[userId].updateValue(userProperties, forKey: "optionalValues")
-//                                if let updateUser = self.user {
-//                                    let values = [newValue, newKey]
-//
-//                                    updateUser["optionalValues"] = values
-//                                }
-                                if let updateUser = self.userDateBase[userId] {
-                                    let properties: [String : Any] = [newKey : newValue]
-//                                    updateUser["optionalValues"] = properties
-                                    debugPrint("->>>>>>>>>>")
-                                    debugPrint(updateUser)
-                                    debugPrint(properties)
-                                    debugPrint("->>>>>>>>>>")
-//                                    updateUser["optionalValue"] as? [String : Any] = properties
+                            if let id = self.user?.userId {
+                                if var user = self.userDateBase[id] as? [String : Any] {
+                                    if var optionalValue = user["optionalValues"] as? [String : Any] {
+                                        optionalValue[newKey] = newValue
+                                        user["optionalValues"] = optionalValue
+                                    } else {
+                                        user["optionalValues"] = [newKey : newValue]
+                                    }
+                                    self.userDateBase[id] = user
+                                    self.ref.child("users").setValue(self.userDateBase)
+                                    self.view.hideToastActivity()
+                                    let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
+                                    self.navigationController?.pushViewController(viewController, animated: false)
+                                    
                                 }
-                                
-                                
-                                
-                                
-                                
-//                                userDateBase[userId] = updateUser
-                                
-                                
-                      
-                                
-                        }
-                            
-                  
-                            
-                            
-                            
-                            
+                            }
                         }
                     }
                 }

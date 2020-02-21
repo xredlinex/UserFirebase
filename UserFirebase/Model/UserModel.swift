@@ -16,8 +16,6 @@ class User {
     var city: String?
     var optionalValues: [String : Any]?
 
-
-
     init(fromDict dict:[String : AnyObject]) {
         self.userId = dict["userId"] as? String
         self.name = dict["name"] as? String
@@ -25,8 +23,6 @@ class User {
         self.age = dict["age"] as? String
         self.city = dict["city"] as? String
         self.optionalValues = dict["optionalValues"] as? [String : Any]
-//        self.valuesOpt = dict["valuesOpt"] as? [[String : Any]]
-        
     }
 }
 
